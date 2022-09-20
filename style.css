@@ -3,25 +3,24 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-body {
+/* body {
   background-color: #073b4c;
   background: -moz-linear-gradient(top, #ffffff 0%, #edf6ff 200%);
   background: -webkit-linear-gradient(top, #ffffff 0%, #edf6ff 200%);
   background: -o-linear-gradient(top, #ffffff 0%, #edf6ff 200%);
   background: -ms-linear-gradient(top, #ffffff 0%, #edf6ff 200%);
   background: linear-gradient(to bottom, #ffffff 0%, #118ab2 200%);
-  float: left;
   height: 305px;
   width: 100%;
-}
+} */
 
 p {
   font-family: 'Karla', sans-serif;
   font-weight: 400;
-  color: black;
 }
 
 h1 {
+  margin-top: 50px;
   font-family: 'Karla', sans-serif;
   font-weight: 800;
   color:
@@ -30,8 +29,9 @@ h2 {
   font-family: 'Karla', sans-serif;
   font-style: italic;
   font-weight: 400;
-  color: #118ab2;
+  color: #d4a373;
 }
+
 .topnav {
   background-color: #white;
   overflow: hidden;
@@ -39,15 +39,81 @@ h2 {
 
 .topnav a {
   float: left;
-  color: #ef476f;
+  display: block;
+  color: #black;
   text-align: center;
-  padding: 14px 220px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-family:"Karla";
-  font-size: 24px;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 20px;
 }
 
 .topnav a:hover {
-  background-color: #ffd166;
-  color: white;
+  background-color: #04BF55;
+  color: #ffafcc;
+}
+
+.myDiv {
+border: 1px outset #e9edc9 inset #e9edc9;
+background-color: #EEE7DF;
+text-align: center;
+font-family: 'Karla', sans-serif;
+font-size: 45px;
+font-style: italic;
+font-weight: 600;
+color: #118ab2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: impact, sans-serif;
+  background: #EEE7DF;
+  color: #B0988E;
+}
+
+img {
+vertical-align: middle;
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover {
+  flex: 1 1 50%;
+}
+
+.box:hover > img {
+  width: 100%;
+  height: 100%;
 }
